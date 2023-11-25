@@ -27,15 +27,15 @@ const tree = document.querySelector(".tree")
 
 //make a christmas tree
 function christmasTree(){
-    let space = ""
     for(let i=1; i<= 12; i++){
         tree.innerHTML += ("<br>")
         for(let j=i; j<12; j++){
             tree.innerHTML += ("# ")
-            tree.style .textAlign = "center"
+            tree.style.textAlign = "center"
             tree.style.fontSize = "2rem"
             tree.style.fontWeight = "bolder"
             tree.style.position = "relative"
+            tree.style.color = "green"
         }   
     }
 }
@@ -52,5 +52,6 @@ function christmasStar(){
     light.style.position = "absolute"
     light.style.left = "700px"
     div.style.borderRadius = "50%"
+    div.style.border = "5px solid red"
 }
 christmasStar()
