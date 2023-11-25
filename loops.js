@@ -65,11 +65,3 @@ function christmasStar(){
     div2.style.border = "5px solid red"
 }
 christmasStar()
-christmasStar()
-christmasStar()
-christmasStar()
-christmasStar()
-christmasStar()
-christmasStar()
-christmasStar()
-christmasStar()
