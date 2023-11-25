@@ -1,288 +1,275 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-image: url("./tengyart-dmvpWD6d3DM-unsplash.jpg");
-    background-position:center;
-    background-repeat: repeat;
-    background-size: cover;
-    height: 100%;
-    position: relative;
-    
+body {
+  background-image: url("./tengyart-dmvpWD6d3DM-unsplash.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
 }
 
-
-.woods{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100vh;
+.woods {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
-.light{
-    position: absolute;
-    top: 900px;
-    right: 200px;
+.light {
+  position: absolute;
+  top: 900px;
+  right: 200px;
 }
-.light2{
-    position: absolute;
-    top: 900px;
-}
-
-.woods:hover .light{
-    transform: translateX(-1000px);
-    animation: animate 6s linear infinite;
-
-}
-.woods:hover .light2{
-    transform: translateX(1000px);
-    animation: animate2 6s linear infinite;
-
-}
-.tree{
-    position: absolute;
-    top: 500px;
+.light2 {
+  position: absolute;
+  top: 900px;
 }
 
-.woods:hover .tree{
-    transform: rotate(365deg);
-    animation: hangout 20s linear infinite;
+.woods:hover .light {
+  transform: translateX(-1000px);
+  animation: animate 6s linear infinite;
+}
+.woods:hover .light2 {
+  transform: translateX(1000px);
+  animation: animate2 6s linear infinite;
+}
+.tree {
+  position: absolute;
+  top: 500px;
+  transition: skew(25deg, 120deg) 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
 
+.woods:hover .tree {
+  width: 300px;
+  transform: rotate(365deg);
+  animation: hangout 20s linear infinite;
 }
 
 @keyframes animate {
-    0% {
-      filter: hue-rotate(0deg);
-      transform: translate(360px);
-    }
-    50% {
-      
-      transform: rotate(360deg);
-    }
-    60% {
-        transform: translateX(1000px);
-    }
-    70% {
-      
-      transform: translateY(-1000px);
-    }
-    80% {
-        transform: translateY(1000px);
-    }
-    
-    100% {
-      filter: hue-rotate(360deg);
-      transform: translateY(100%);
-    }
+  0% {
+    filter: hue-rotate(0deg);
+    transform: translate(360px);
   }
+  50% {
+    transform: rotate(360deg);
+  }
+  60% {
+    transform: translateX(1000px);
+  }
+  70% {
+    transform: translateY(-1000px);
+  }
+  80% {
+    transform: translateY(1000px);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+    transform: translateY(100%);
+  }
+}
 @keyframes animate2 {
-    0% {
-      filter: hue-rotate(0deg);
-      transform: translateX(100%)
-    }
-    50% {
-      
-      transform: translateY(-1000px);
-    }
-    60% {
-        transform: translateY(1000px);
-    }
-    70% {
-      
-      transform: translateX(-1000px);
-    }
-    80% {
-        transform: translateX(1000px);
-    }
-    
-    100% {
-      filter: hue-rotate(-360deg);
-      transform: translateY(100%);
-    }
+  0% {
+    filter: hue-rotate(0deg);
+    transform: translateX(100%);
   }
+  50% {
+    transform: translateY(-1000px);
+  }
+  60% {
+    transform: translateY(1000px);
+  }
+  70% {
+    transform: translateX(-1000px);
+  }
+  80% {
+    transform: translateX(1000px);
+  }
+
+  100% {
+    filter: hue-rotate(-360deg);
+    transform: translateY(100%);
+  }
+}
 @keyframes hangout {
-    0% {
-      filter: hue-rotate(0deg);
-    }
-    33% {
-      transform: rotate(90deg);
-    }
-    50% {
-      transform: rotate(-270deg);
-    }
-    66% {
-      transform: translateX(500px);
-    }
-    75% {
-      transform: translateX(-1000px);
-    }
-    80% {
-      transform: translateY(1000px);
-    }
-    100% {
-      filter: hue-rotate(360deg);
-      transform: rotate(360deg);
-    }
+  0% {
+    filter: hue-rotate(0deg);
   }
-
-  .animals {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    top: 500px;
-    left: 100px;
+  33% {
+    transform: rotate(90deg);
   }
-
-  .animals:hover .empty {
-    transform: translateX(800px);
-    animation: animate3 6s linear infinite;
+  50% {
+    transform: rotate(-270deg);
   }
-  
-  @keyframes animate3 {
-    0% {
-      filter: hue-rotate(0deg);
-      transform: translateX(-3000px);
-    }
-    33% {
-      transform: translateY(500px);
-    }
-    50% {
-      transform: translateX(500px);
-    }
-    66% {
-      transform: translateY(-5000px);
-    }
-    100% {
-      filter: hue-rotate(360deg);
-      transform: translateX(0%);
-    }
+  66% {
+    transform: translateX(500px);
   }
-  
-
-  .empty {
-    position: relative;
-    height: 50px;
-    width: 30px;
-    background-color: #111;
-    margin: 1px;
+  75% {
+    transform: translateX(-1000px);
   }
-  
-  .empty::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -15px;
-    width: 0px;
-    height: 0px;
-    border-right: 15px solid red;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
+  80% {
+    transform: translateY(1000px);
   }
-  .empty::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -15px;
-    width: 0px;
-    height: 0px;
-    border-left: 15px solid red;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    transition: transform 1s;
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
   }
-
-  .moon{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    top: 300px;
-    left: 500px;
-    background-color: gold;
-    border-radius: 50%;
-  }
-
-  .sun{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 300px;
-    width: 300px;
-    /* background-color: yellow; */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-.house{
-    position: absolute;
-    bottom: 250px;
-    left: 250px;
-    background-color: white;
-    width: 100px;
-    height: 100px;
 }
-  .roof{
-    /* border-top: 100px solid yellow; */
-    border-bottom: 100px solid gray;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    width: 0px;
-    height: 0px;
-  }
-  .wall{
-    width: 200px;
-    height: 150px;
-    background-color: mediumpurple;
-    position: relative;
-    border: 5px solid blueviolet;
-  }
-  .door{
-    width: 40px;
-    height: 80px;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    left: 80px;
-    border: 5px solid blueviolet;
-    
-  }
-  .window1{
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    border: 5px solid blueviolet;
-  }
-  .window2{
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    border: 5px solid blueviolet;
-  }
 
-.space{
-    height: 100px;
-    width: 100px;
-    background-image: url("./united-states.png");
-    background-position: center;
-    background-size: contain;
-
+.animals {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  top: 500px;
+  left: 100px;
 }
-  
 
-  
+.animals:hover .empty {
+  transform: translateX(800px);
+  animation: animate3 6s linear infinite;
+}
+
+@keyframes animate3 {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: translateX(-3000px);
+  }
+  33% {
+    transform: translateY(500px);
+  }
+  50% {
+    transform: translateX(500px);
+  }
+  66% {
+    transform: translateY(-5000px);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: translateX(0%);
+  }
+}
+
+.empty {
+  position: relative;
+  height: 50px;
+  width: 30px;
+  background-color: #111;
+  margin: 1px;
+}
+
+.empty::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 0px;
+  height: 0px;
+  border-right: 15px solid red;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+.empty::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid red;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  transition: transform 1s;
+}
+
+.moon {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 300px;
+  left: 500px;
+  background-color: gold;
+  border-radius: 50%;
+}
+
+.sun {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 350px;
+  width: 350px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.house {
+  position: absolute;
+  bottom: 250px;
+  left: 250px;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+.roof {
+  /* border-top: 100px solid yellow; */
+  border-bottom: 100px solid gray;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  width: 0px;
+  height: 0px;
+}
+.wall {
+  width: 200px;
+  height: 150px;
+  background-color: mediumpurple;
+  position: relative;
+  border: 5px solid blueviolet;
+}
+.door {
+  width: 40px;
+  height: 80px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  border: 5px solid blueviolet;
+}
+.window1 {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 5px solid blueviolet;
+}
+.window2 {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 5px solid blueviolet;
+}
+
+.space {
+  height: 100px;
+  width: 100px;
+  background-image: url("./united-states.png");
+  background-position: center;
+  background-size: contain;
+}
