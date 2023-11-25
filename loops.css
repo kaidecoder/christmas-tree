@@ -202,16 +202,12 @@ body{
     border-radius: 50%;
   }
 
-  .yellow{
-    height: 80px;
-    width: 80px;
+  .sun{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border-radius: 50%;
 
   }
 
-  .yellow:first-child{
-
-    transform: rotate(45deg);
-  }
-  /* .yellow:last-child{
-
-  } */
+  
