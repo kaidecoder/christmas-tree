@@ -34,7 +34,6 @@ function christmasTree(){
             tree.style.textAlign = "center"
             tree.style.fontSize = "2rem"
             tree.style.fontWeight = "bolder"
-            tree.style.position = "relative"
             tree.style.color = "green"
         }   
     }
