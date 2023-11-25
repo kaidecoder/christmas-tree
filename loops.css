@@ -210,10 +210,14 @@ body{
   }
 
   .sun{
-    height: 200px;
-    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 400px;
+    width: 400px;
     background-color: yellow;
     border-radius: 50%;
+
 
   }
 
