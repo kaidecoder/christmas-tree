@@ -35,6 +35,7 @@ function christmasTree(){
             tree.style .textAlign = "center"
             tree.style.fontSize = "2rem"
             tree.style.fontWeight = "bolder"
+            tree.style.position = "relative"
         }   
     }
 }
@@ -48,8 +49,8 @@ function christmasStar(){
     div.style.width = "80px";
     div.style.backgroundColor = "yellow"
     light.appendChild(div)
-    light.style.position = "relative"
-    light.style.left = "350px"
+    light.style.position = "absolute"
+    light.style.left = "700px"
     div.style.borderRadius = "50%"
 }
 christmasStar()
