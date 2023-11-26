@@ -246,7 +246,15 @@ body {
   bottom: 0;
   left: 80px;
   border: 5px solid blueviolet;
+  
 }
+
+.woods:hover .door{
+  width: 300px;
+  transform: skey(35deg, 75deg);
+  animation: hangout 20s linear infinite;
+}
+
 .window1 {
   width: 40px;
   height: 40px;
@@ -255,7 +263,15 @@ body {
   top: 20px;
   right: 20px;
   border: 5px solid blueviolet;
+  transition: skew(25deg, 120deg) 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
+
+.woods:hover .window1{
+  width: 300px;
+  transform: rotate(365deg);
+  animation: hangout 20s linear infinite;
+}
+
 .window2 {
   width: 40px;
   height: 40px;
